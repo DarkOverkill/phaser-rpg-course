@@ -1,17 +1,8 @@
-class TitleScene extends Phaser.Scene {
+import JSONLevelScene from './JSONLevelScene';
+
+class TitleScene extends JSONLevelScene {
   constructor() {
-    super({ key: 'TitleScene' });
-  }
-
-  preload() {
-    this.load.image('background_image', 'assets/images/background.png');
-  }
-
-  create() {
-    let background = this.add.sprite(0, 0, 'background_image');
-    background.setOrigin(0, 0);
-
-    let title_text = this.add.text(50, 50, 'Zenva course');
+    super('TitleScene');
   }
 }
 
