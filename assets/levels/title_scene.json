@@ -9,26 +9,32 @@
     "background",
     "texts"
   ],
-  "sprites": {
+  "prefabs": {
     "background": {
-      "type": "sprite",
+      "type": "background",
       "position": { "x": 320, "y": 240 },
-      "texture": "background_image",
-      "group": "background"
+      "properties": {
+        "texture": "background_image",
+        "group": "background"
+      }
     },
     "title_message": {
       "type": "text",
       "position": { "x": 20, "y": 100 },
-      "style": { "font": "65px Minimal", "fill": "#EDDF14" },
-      "text": "Phaser course rpg",
-      "group": "texts"
+      "properties": {
+        "style": { "font": "65px Minimal", "fill": "#EDDF14" },
+        "text": "Phaser course rpg",
+        "group": "texts"
+      }
     },
     "start_message": {
       "type": "text",
       "position": { "x": 150, "y": 200 },
-      "style": { "font": "20px Minimal", "fill": "#EDDF14" },
-      "text": "click to start",
-      "group": "texts"
+      "properties": {
+        "style": { "font": "20px Minimal", "fill": "#EDDF14" },
+        "text": "click to start",
+        "group": "texts"
+      }
     }
   }
 }
