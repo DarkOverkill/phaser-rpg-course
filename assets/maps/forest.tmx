@@ -47,7 +47,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="4" name="buldings" width="20" height="15">
+ <layer id="4" name="buildings" width="20" height="15">
   <properties>
    <property name="collision" type="bool" value="true"/>
    <property name="tileset" value="map_tileset"/>
@@ -71,10 +71,11 @@
 </data>
  </layer>
  <objectgroup id="5" name="objects">
-  <object id="2" name="player" type="player" x="0" y="128" width="32" height="32">
+  <object id="2" name="player" type="player" x="224" y="32" width="32" height="32">
    <properties>
     <property name="group" value="players"/>
     <property name="texture" value="player_spritesheet"/>
+    <property name="walking_speed" type="int" value="50"/>
    </properties>
   </object>
  </objectgroup>

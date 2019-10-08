@@ -1,12 +1,13 @@
 import JSONLevelScene from './JSONLevelScene';
 import Prefab from '../prefabs/Prefab';
+import Player from '../prefabs/world/Player';
 
 class WorldScene extends JSONLevelScene {
   constructor() {
     super('WorldScene');
 
     this.prefab_classes = {
-      player: Prefab.prototype.constructor,
+      player: Player.prototype.constructor,
     }
   }
 
