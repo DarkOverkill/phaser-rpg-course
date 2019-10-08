@@ -16,15 +16,15 @@ class LoadingScene extends Phaser.Scene {
 
   preload() {
     let assets = this.level_data.assets;
-    for (let assets_key in assets) {
-      let asset = assets[assets_key];
+    for (let asset_key in assets) {
+      let asset = assets[asset_key];
       switch (asset.type) {
         case 'image':
-          this.load.image(assets_key, asset.source);
+          this.load.image(asset_key, asset.source);
           break;
         case 'spritesheet':
           this.load.spritesheet(
-            assets_key,
+            asset_key,
             asset.source,
             {
               frameWidth: asset.frame_width,
@@ -35,12 +35,15 @@ class LoadingScene extends Phaser.Scene {
             }
           );
           break;
+        case 'tilemap':
+          this.load.tilemapTiledJSON(asset_key, asset.source);
+          break;
       }
     }
   }
 
   create(data) {
-    this.scene.start('TitleScene', { level_data: this.level_data });
+    this.scene.start(data.scene, { level_data: this.level_data });
   }
 }
 
